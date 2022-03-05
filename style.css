@@ -1,0 +1,48 @@
+body{
+    font-family:arial;
+    background-color: #363636;
+    color: white;
+}
+
+#container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#container div {
+    width:60px;
+    height:60px;
+    background-color:#fff;
+    border:1px ridge #000;
+}
+
+img {
+    width:60px;
+}
+
+label{
+    font-size: 20px;
+}
+
+.buttonStyle{
+background-color: #DC7633;
+border: none;
+color: rgb(0, 0, 0);
+padding: 7px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+
+.LOSEGame{
+    color: red;
+    font-size: 40px;
+}
+
+.WINGame{
+    color: Green;
+    font-size: 40px;;
+}
