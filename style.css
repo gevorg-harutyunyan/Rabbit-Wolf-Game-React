@@ -39,4 +39,12 @@ img {
     width: 54px;
 }
 
+.win, .lose {
+    font-size: 50px;
+    color: green;
+}
+
+.lose {
+    color: red;
+}
 
