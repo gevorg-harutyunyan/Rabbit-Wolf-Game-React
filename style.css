@@ -1,48 +1,42 @@
-body{
-    font-family:arial;
-    background-color: #363636;
-    color: white;
+body {
+    background-color: #c3c3c3;
+    text-align: center;
+}
+
+#mapSize, button {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    color: #ffffff;
+    background-color: #323232
+}
+
+#mapSize option {
+    border-radius: 15px;
+}
+
+button {
+    width: 140px;
 }
 
 #container {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-#container div {
-    width:60px;
-    height:60px;
-    background-color:#fff;
-    border:1px ridge #000;
+table {
+    margin: auto;
+}
+
+td {
+    border: 1px solid black;
+    background-color:white;
+    width: 60px;
+    height: 60px;
 }
 
 img {
-    width:60px;
+    width: 54px;
 }
 
-label{
-    font-size: 20px;
-}
 
-.buttonStyle{
-background-color: #DC7633;
-border: none;
-color: rgb(0, 0, 0);
-padding: 7px 15px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-}
-
-.LOSEGame{
-    color: red;
-    font-size: 40px;
-}
-
-.WINGame{
-    color: Green;
-    font-size: 40px;;
-}
