@@ -56,7 +56,7 @@ const createConfig = _mapSize => {
 const createGame = (_containerID, _mapSizeID) => {
     const container = document.getElementById(_containerID)
     let matrix = []
-    const config = createConfig(document.getElementById(_mapSizeID).value)
+    let config = createConfig(document.getElementById(_mapSizeID).value)
 
     const fillMatrix = () => {
         for (let x = 0; x < config.MAP_SIZE; x++) {
@@ -246,7 +246,8 @@ const createGame = (_containerID, _mapSizeID) => {
         }
     }
 
-    const start = () => {
+    const start = (_mapSizeID) => {
+        config = createConfig(document.getElementById(_mapSizeID).value)
         config.isGameInProcess = true
         fillMatrix()
         fillMatrixWithCharacters()
@@ -259,11 +260,10 @@ const createGame = (_containerID, _mapSizeID) => {
     }
 }
 
-
 const game = createGame('container', 'mapSize')
 
 const play = () => {
-    game.start()
+    game.start('mapSize')
 }
 
 window.addEventListener('keyup', evn => {
