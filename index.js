@@ -26,6 +26,15 @@ const isEqual = (a) => (b) => a === b
 const calculateDistance = (a) => (b) => Math.sqrt((b[X] - a[X]) ** 2 + (b[Y] - a[Y]) ** 2)
 const idGenerator = () => Math.floor(Math.random() * 100000)
 
+const neighborPositions = ([X, Y]) => {
+    return [
+        [X, Y + 1],
+        [X, Y - 1],
+        [X + 1, Y],
+        [X - 1, Y]
+    ]
+}
+
 const renderMatrix = (container, matrix) => {
     container.innerHTML = ""
     const table = document.createElement('table')
@@ -180,15 +189,6 @@ const createGame = (container) => {
         }
     }
 
-    const neighborPositions = ([X, Y]) => {
-        return [
-            [X, Y + 1],
-            [X, Y - 1],
-            [X + 1, Y],
-            [X - 1, Y]
-        ]
-    }
-
     const filterIllegalPositions = neighborPositions => neighborPositions.filter(([X, Y]) => _isInRange(X) && _isInRange(Y))
 
     const filterUnavailableFields = positions => positions.filter(position => isAvailableField(WOLF, position))
@@ -302,10 +302,10 @@ const newGame = () => {
     container.appendChild(gameBlock)
     
     document.getElementById("playGameButton-" + id)
-    .onclick = () => game.start(document.getElementById("mapSize-" + id).value)
+        .onclick = () => game.start(document.getElementById("mapSize-" + id).value)
 
     document.getElementById("deleteGameButton-" + id)
-    .onclick = () => gameBlock.remove()
+        .onclick = () => gameBlock.remove()
     
     const gameContainer = document.getElementById("gameContainer-" + id)
 
@@ -313,6 +313,6 @@ const newGame = () => {
     document.getElementById("ArrowUp-" + id).onclick = () => game.event("ArrowUp")
     document.getElementById("ArrowDown-" + id).onclick = () => game.event("ArrowDown")
     document.getElementById("ArrowRight-" + id).onclick = () => game.event("ArrowRight")
-    
+
     const game = createGame(gameContainer)
 }
