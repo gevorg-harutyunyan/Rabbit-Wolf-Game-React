@@ -3,7 +3,12 @@ body {
     text-align: center;
 }
 
-#mapSize, button {
+.game:not(:first-child) {
+    margin-top: 20px;
+    border-top: 1px solid #000;
+}
+
+select, button {
     width: 80px;
     height: 30px;
     text-align: center;
@@ -12,15 +17,29 @@ body {
     background-color: #323232
 }
 
-#mapSize option {
+select {
     border-radius: 15px;
+}
+
+.gameContainer {
+    margin-bottom: 15px;
 }
 
 button {
     width: 140px;
 }
 
+.delete {
+    font-weight: bold;
+    width: 30px;
+    color: red;
+}
+
 #container {
+    margin-top: 10px;
+}
+
+.game {
     margin-top: 10px;
 }
 
@@ -39,12 +58,12 @@ img {
     width: 54px;
 }
 
-.win, .lose {
+.Win, .Lose {
     font-size: 50px;
     color: green;
 }
 
-.lose {
+.Lose {
     color: red;
 }
 
