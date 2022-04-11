@@ -131,12 +131,13 @@ const createGame = (container) => {
 
     const getCharacterPositions = character => {
         return matrix.reduce((positions, row, X) => {
-            return [...positions, ...row.reduce((rowPositions, cell, Y) => {
+            let rowPositions = []
+            row.forEach((cell, Y) => {
                 if (cell === character) {
-                    return [...rowPositions, [X, Y]]
+                    rowPositions.push([X, Y])
                 }
-                return rowPositions
-            }, [])]
+            })
+            return [...positions, ...rowPositions]
         }, [])
     }
 
