@@ -1,0 +1,73 @@
+body {
+    background-color: #c3c3c3;
+    text-align: center;
+}
+
+.App {
+    margin-top: 10px;
+}
+
+.game:not(:first-child) {
+    margin-top: 20px;
+    border-top: 1px solid #000;
+}
+
+select, button {
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    color: #ffffff;
+    background-color: #323232
+}
+
+select {
+    border-radius: 15px;
+}
+
+.gameContainer {
+    margin-bottom: 15px;
+}
+
+button {
+    width: 140px;
+}
+
+.delete {
+    font-weight: bold;
+    width: 30px;
+    color: red;
+}
+
+#container {
+    margin-top: 10px;
+}
+
+.game {
+    margin-top: 10px;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    border: 1px solid black;
+    background-color:white;
+    width: 60px;
+    height: 60px;
+}
+
+img {
+    width: 54px;
+}
+
+.Win, .Lose {
+    font-size: 50px;
+    color: green;
+}
+
+.Lose {
+    color: red;
+}
+
