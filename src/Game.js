@@ -1,13 +1,11 @@
-import Config from './Config';
-import Controller from './Controller';
-import RenderMatrix from './RenderMatrix';
+import { Config } from './Config';
+import {Controller} from './Controller';
+import { RenderMatrix } from './RenderMatrix';
 import { createGame } from './RabbitWolf';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 
-const game = createGame()
-
-function Game() {
+const Game = () => {
     
     const [game, setGame] = useState()
     const [matrix, setMatrix] = useState()
@@ -16,7 +14,7 @@ function Game() {
     return (
         <div className='game'>
 
-            <Config getMapSize={(mapSize) => {
+            <Config setSize={(mapSize) => {
                 const game = createGame()
                 setMatrix(game.start(mapSize))
                 setGame(game)
@@ -37,4 +35,4 @@ function Game() {
     );
 }
 
-export default Game;
+export { Game }

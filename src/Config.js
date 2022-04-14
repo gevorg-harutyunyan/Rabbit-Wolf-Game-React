@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Config({ getMapSize }) {
+const Config = ({ setSize }) => {
 
     const [mapSize, setMapSize] = useState(5)
 
@@ -11,7 +11,9 @@ export default function Config({ getMapSize }) {
                 <option value="7" >7X7</option>
                 <option value="9" >9X9</option>
             </select>
-            <button onClick={() => getMapSize(mapSize)}>Play Game</button>
+            <button onClick={() => setSize(mapSize)}>Play Game</button>
         </>
     )
 }
+
+export { Config }

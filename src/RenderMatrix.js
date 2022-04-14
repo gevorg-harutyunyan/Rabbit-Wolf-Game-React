@@ -1,14 +1,12 @@
 import { CHARACTERS } from "./RabbitWolf"
 
 
-export default function RenderMatrix({ matrix }) {
+const RenderMatrix = ({ matrix }) => {
 
     if (matrix === undefined) {
-        return (
-            <div id="container">
-            </div>
-        )
+        return null
     }
+
     return (
         <div id="container">
             <table>
@@ -29,3 +27,5 @@ export default function RenderMatrix({ matrix }) {
         </div>
     )
 }
+
+export { RenderMatrix }

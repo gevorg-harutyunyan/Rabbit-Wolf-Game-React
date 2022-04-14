@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import './App.css';
-import Game from './Game';
-import { idGenerator } from './RabbitWolf';
+import { useState } from 'react'
+import './App.css'
+import { Game } from './Game'
+import { idGenerator } from './RabbitWolf'
 
 function App() {
   const [gameId, setGameId] = useState([])
